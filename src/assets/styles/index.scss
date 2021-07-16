@@ -1,0 +1,63 @@
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #212F6E;
+}
+// header 
+.van-nav-bar{
+    background-color: rgba(223, 224, 230, .3) !important;
+    .van-nav-bar__left{
+        .van-icon{
+            color:#757DA3 !important;
+        }
+    }
+    .van-nav-bar__title{
+        color: #757DA3;
+    }
+}
+.van-radio-group{
+    .van-radio{
+        padding: .625rem;
+        .van-radio__label{
+            color: #212F6E;
+        }
+    }
+}
+.van-checkbox-group{
+    .van-checkbox{
+        padding: .625rem;
+        .van-checkbox__label{
+            color: #212F6E;
+        }
+    }
+}
+.van-cell.van-field{
+    border: 1px solid rgb(235, 230, 230);
+    border-radius: .25rem;
+}
+// 底部标签栏
+.van-tabbar{
+    .van-tabbar-item{
+        &.van-tabbar-item--active{
+            color: #7469F8 !important;
+        }
+        &:first-child,&:last-child{
+            color: #7469F8;
+            background-color: #ECEDFD;//rgba(1, 1, 1, .6)//#DFE0E6;
+            .van-tabbar-item__icon{
+                font-size: 1rem;
+            }
+        }
+        &:nth-child(2){
+            color: #fff;
+            background-color: #7469F8;
+            
+        }
+    }
+}
+h5{
+    font-size: .875rem;
+    color: #757DA3;
+}
