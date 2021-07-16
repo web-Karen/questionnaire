@@ -7,7 +7,9 @@
 }
 // header 
 .van-nav-bar{
-    background-color: rgba(223, 224, 230, .3) !important;
+    .van-nav-bar__content{
+        background-color: rgba(223, 224, 230, .3) !important;
+    }
     .van-nav-bar__left{
         .van-icon{
             color:#757DA3 !important;

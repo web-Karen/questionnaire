@@ -3,6 +3,7 @@
     <van-nav-bar
       right-text="交卷"
       left-arrow
+      fixed
       @click-left="onClickLeft"
     >
       <template #title>
@@ -154,6 +155,16 @@ export default {
           }, {
             name: '37'
           }]
+        }, {
+          title: '暗示法所大所多撒',
+          multiple: true,
+          option: [{
+            name: '12'
+          }, {
+            name: '58'
+          }, {
+            name: '37'
+          }]
         }]
       }]
     }
@@ -257,6 +268,7 @@ export default {
 </script>
 <style lang="scss">
 .main{
+  margin: 2.875rem 0 4.375rem;
   .title{
     display: flex;
     align-items: center;
