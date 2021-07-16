@@ -69,8 +69,22 @@
         &:nth-child(2){
             color: #fff;
             background-color: #7469F8;
-            
+            &.van-tabbar-item--active{
+                color: #fff !important;
+            }
         }
+    }
+}
+// 对话框
+.van-dialog{
+    color: #212F6E;
+    .van-dialog__content{
+        .van-dialog__message.van-dialog__message--has-title{
+            color: #757DA3;
+        }
+    }
+    .van-dialog__confirm{
+        color: #7469F8 !important;
     }
 }
 h5{
