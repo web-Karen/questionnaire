@@ -30,6 +30,8 @@
       <q-and-a v-if="type.value === 3" :data="qaList" :active="curIndex" />
       <!-- 多选题 -->
       <single-opt v-if="type.value === 4" :multiple="true" :data="singleList" :active="curIndex" />
+      <!-- 理解题 -->
+      <comprehension v-if="type.value === 5" :data="cmList" :active="curIndex" />
     </div>
 
     <!-- 题型 -->
@@ -59,12 +61,14 @@ import singleOpt from './components/singleOpt'
 import TrueOrFalse from './components/trueOrFalse.vue'
 import fillIn from './components/fillIn.vue'
 import qAndA from './components/qAndA.vue'
+import comprehension from './components/comprehension.vue'
 export default {
   components: {
     singleOpt,
     TrueOrFalse,
     fillIn,
-    qAndA
+    qAndA,
+    comprehension
   },
   data() {
     return {
@@ -81,7 +85,8 @@ export default {
         { text: '判断题', value: 1 },
         { text: '填空题', value: 2 },
         { text: '问答题', value: 3 },
-        { text: '多选题', value: 4 }
+        { text: '多选题', value: 4 },
+        { text: '理解题', value: 5 }
       ],
       time: 30 * 60 * 60 * 1000,
       singleList: [{
@@ -126,6 +131,30 @@ export default {
       }],
       qaList: [{
         title: '请举例一个假命题'
+      }],
+      cmList: [{
+        title: '测试理解题',
+        subject: [{
+          title: '案发案说法发顺丰',
+          multiple: false,
+          option: [{
+            name: '12'
+          }, {
+            name: '58'
+          }, {
+            name: '37'
+          }]
+        }, {
+          title: '暗示法所大所多撒',
+          multiple: true,
+          option: [{
+            name: '12'
+          }, {
+            name: '58'
+          }, {
+            name: '37'
+          }]
+        }]
       }]
     }
   },
@@ -146,11 +175,14 @@ export default {
       if (this.type.value === 3) {
         this.curTotal = this.qaList.length
       }
+      if (this.type.value === 5) {
+        this.curTotal = this.cmList.length
+      }
       // ...
     },
     aletrType(type) {
       if (type === 'next') {
-        if (this.type.value < 4) {
+        if (this.type.value < this.option.length - 1) {
           this.curIndex = 0
           this.type.value++
           this.type.text = this.option.find(e => {

@@ -20,6 +20,14 @@
 .van-radio-group{
     .van-radio{
         padding: .625rem;
+        .van-radio__icon{
+            &.van-radio__icon--checked{
+                .van-icon{
+                    background-color: #7469F8;
+                    border-color: #7469F8;
+                }
+            }
+        }
         .van-radio__label{
             color: #212F6E;
         }
@@ -28,6 +36,14 @@
 .van-checkbox-group{
     .van-checkbox{
         padding: .625rem;
+        .van-checkbox__icon{
+            &.van-checkbox__icon--checked{
+                .van-icon{
+                    background-color: #7469F8;
+                    border-color: #7469F8;
+                }
+            }
+        }
         .van-checkbox__label{
             color: #212F6E;
         }
