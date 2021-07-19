@@ -87,7 +87,13 @@
     }
     .van-dialog__confirm{
         color: #7469F8 !important;
+        background-color: #ECEDFD;
     }
+}
+h1,h2,h3,h4,h5,h6{
+    line-height: 1.375rem;
+    margin-bottom: .5rem;
+    margin: 0;
 }
 h5{
     font-size: .875rem;
