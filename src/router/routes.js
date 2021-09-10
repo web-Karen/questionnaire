@@ -1,7 +1,8 @@
+import sYoungRoute from './syoung'
 const route = [
   {
     path: '/',
-    redirect: { name: 'list' }
+    redirect: { name: 'sYoungList' }
   },
   // 考题
   {
@@ -20,7 +21,7 @@ const route = [
     path: '/notice',
     name: 'notice',
     component: () => import('@/views/notice/index')
-  }
-
+  },
+  ...sYoungRoute
 ]
 export default route

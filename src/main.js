@@ -5,10 +5,15 @@ import router from './router'
 import store from './store'
 
 import '@/assets/styles/index.scss'
+
 import 'vant/lib/index.css'
 import 'vant/lib/icon/local.css'
 import vant from 'vant'
 Vue.use(vant) // 导入vant
+
+// const echarts = require('echarts')
+import * as echarts from 'echarts' // 5+版本的引用方式
+Vue.prototype.$echarts = echarts
 
 import env from '@/env'
 
